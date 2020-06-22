@@ -1,0 +1,24 @@
+{
+  "LOGIN": {
+    "MANAGER_PROJECT": "Administrador de proyectos",
+    "LOGIN_TITLE": "Iniciar sesión",
+    "EMAIL_LABEL": "Correo electrónico",
+    "REQUIRED": "requerido",
+    "PASSWORD_LABEL": "Contraseña",
+    "LOGIN_BTN": "Iniciar sesión",
+    "UNAUTHORIZED": "Correo electrónico ó contraseña son incorrectos"
+  },
+  "NAVBAR": {
+    "DASHBOARD": "Tablero",
+    "DOCUMENTATION": "Documentación",
+    "MORE": "Más",
+    "ABOUT": "Acerca de",
+    "JOBS": "Vacantes",
+    "CONTACT": "Contacto",
+    "REPORT_ISSUE": "Reportar un problema",
+    "SIGNOUT": "Cerrar sesión"
+  },
+  "HOME": {
+    "HOME": "Inicio"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "LOGIN": {
+    "MANAGER_PROJECT": "Manager project",
+    "LOGIN_TITLE": "Sign in",
+    "EMAIL_LABEL": "Email",
+    "REQUIRED": "required",
+    "PASSWORD_LABEL": "Password",
+    "LOGIN_BTN": "Log in",
+    "UNAUTHORIZED": "Email or password are invalid"
+  },
+  "NAVBAR": {
+    "DASHBOARD": "Dashboard",
+    "DOCUMENTATION": "Documentation",
+    "MORE": "More",
+    "ABOUT": "About",
+    "JOBS": "Jobs",
+    "CONTACT": "Contact",
+    "REPORT_ISSUE": "Report an issue",
+    "SIGNOUT": "Log out"
+  },
+  "HOME": {
+    "HOME": "Home"
+  }
+}

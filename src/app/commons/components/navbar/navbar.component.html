@@ -1,0 +1,72 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="">
+      <h2 class="title is-5 has-text-primary">Soluciones empresariales</h2>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+      data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        {{ 'NAVBAR.DASHBOARD' | translate }}
+      </a>
+
+      <a class="navbar-item">
+        {{ 'NAVBAR.DOCUMENTATION' | translate }}
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          {{ 'NAVBAR.MORE' | translate }}
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            {{ 'NAVBAR.ABOUT' | translate }}
+          </a>
+          <a class="navbar-item">
+            {{ 'NAVBAR.JOBS' | translate }}
+          </a>
+          <a class="navbar-item">
+            {{ 'NAVBAR.CONTACT' | translate }}
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            {{ 'NAVBAR.REPORT_ISSUE' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field">
+          <div class="control">
+            <div class="select is-primary">
+              <select #langSelect (change)="translate.use(langSelect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">
+                  {{ lang }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            {{ 'NAVBAR.SIGNOUT' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

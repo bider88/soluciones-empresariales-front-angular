@@ -1,0 +1,33 @@
+.container-lang {
+  position: relative;
+
+  .select-lang {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+
+  .background-login {
+    background: #f4f4f4;
+
+    .login {
+      padding: 60px 40px 40px;
+      width: 50%;
+      margin: 0 auto;
+      height: calc(100vh - 353px);
+      display: flex;
+      flex-direction: column;
+
+      .button {
+        margin-top: 40px;
+      }
+
+      .message {
+        margin: 40px auto 0;
+      }
+    }
+  }
+
+}

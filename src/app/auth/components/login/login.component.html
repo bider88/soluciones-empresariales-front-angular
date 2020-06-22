@@ -1,0 +1,72 @@
+<div class="container-lang">
+  <div class="select-lang">
+    <div class="field">
+      <div class="control">
+        <div class="select is-primary">
+          <select #langSelect (change)="translate.use(langSelect.value)">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">
+              {{ lang }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Soluciones empresariales SA de CV
+        </h1>
+        <h2 class="subtitle">
+          {{ 'LOGIN.MANAGER_PROJECT' | translate }}
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="background-login">
+    <div class="container">
+      <div class="login">
+        <h1 class="title">{{ 'LOGIN.LOGIN_TITLE' | translate }}</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="field">
+            <label class="label">{{ 'LOGIN.EMAIL_LABEL' | translate }}</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="{{ 'LOGIN.EMAIL_LABEL' | translate }}" formControlName="email"
+                [ngClass]="{
+                  'is-danger': validateControl(loginForm.controls['email']),
+                  'is-success': !validateControl(loginForm.controls['email']) && isValidControl(loginForm.controls['email'])
+                }">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+            <p class="help is-danger" *ngIf="validateControl(loginForm.controls['email'])">* {{ 'LOGIN.EMAIL_LABEL' | translate }} {{ 'LOGIN.REQUIRED' | translate }}</p>
+          </div>
+          <div class="field">
+            <label class="label">{{ 'LOGIN.PASSWORD_LABEL' | translate }}</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="password" placeholder="{{ 'LOGIN.PASSWORD_LABEL' | translate }}" formControlName="password"
+                [ngClass]="{
+                  'is-danger': validateControl(loginForm.controls['password']),
+                  'is-success': !validateControl(loginForm.controls['password']) && isValidControl(loginForm.controls['password'])
+                }">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </div>
+            <p class="is-danger" *ngIf="validateControl(loginForm.controls['password'])">{{ 'LOGIN.PASSWORD_LABEL' | translate }} {{ 'LOGIN.REQUIRED' | translate }}</p>
+          </div>
+          <p class="help is-danger message" *ngIf="unauthorized">{{ 'LOGIN.UNAUTHORIZED' | translate }}</p>
+          <div class="buttons is-right">
+            <button class="button is-fullwidth is-rounded is-primary" [disabled]="loading">
+              <i class="fas fa-sign-in-alt" *ngIf="!loading"></i>
+              <i class="fas fa-spinner" *ngIf="loading"></i>
+              {{ 'LOGIN.LOGIN_BTN' | translate }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
