@@ -26,8 +26,30 @@
 
       .message {
         margin: 40px auto 0;
+        height: 24px;
       }
     }
   }
 
+}
+
+@media only screen and (max-width: 700px) {
+  .container-lang {
+
+    .background-login {
+      background: #f4f4f4;
+
+      .login {
+        width: 100%;
+        margin: 0 auto;
+        height: calc(100vh - 233px);
+
+        .message {
+          margin: 40px auto 0;
+          height: 24px;
+        }
+      }
+    }
+
+  }
 }

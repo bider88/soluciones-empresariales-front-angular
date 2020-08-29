@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
+  openNavbarMenu = false;
+
   constructor(
     public translate: TranslateService,
     private authService: AuthService

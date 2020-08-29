@@ -60,8 +60,8 @@ export class LoginComponent implements OnInit {
 
   buildForm() {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.email, Validators.required]),
-      password: new FormControl('', Validators.required)
+      email: new FormControl('admin@admin.com', [Validators.email, Validators.required]),
+      password: new FormControl('123456', Validators.required)
     });
   }
 
