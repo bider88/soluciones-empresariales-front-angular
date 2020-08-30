@@ -59,9 +59,8 @@
           </div>
           <p class="help is-danger message" *ngIf="unauthorized">{{ 'LOGIN.UNAUTHORIZED' | translate }}</p>
           <div class="buttons is-right">
-            <button class="button is-fullwidth is-rounded is-primary" [disabled]="loading">
-              <i class="fas fa-sign-in-alt" *ngIf="!loading"></i>
-              <i class="fas fa-spinner" *ngIf="loading"></i>
+            <button class="button is-fullwidth is-rounded is-primary" [ngClass]="{'is-loading': loading}" [disabled]="loading">
+              <i class="fas fa-sign-in-alt"></i>
               {{ 'LOGIN.LOGIN_BTN' | translate }}
             </button>
           </div>

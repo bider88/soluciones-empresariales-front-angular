@@ -19,6 +19,7 @@
     "SIGNOUT": "Cerrar sesión"
   },
   "HOME": {
-    "HOME": "Inicio"
+    "TITLE": "Bienvenido a",
+    "SUBTITLE": "Ayudando a las empresas"
   }
 }

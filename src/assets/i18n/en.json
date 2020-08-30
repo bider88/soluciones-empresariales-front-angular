@@ -19,6 +19,7 @@
     "SIGNOUT": "Log out"
   },
   "HOME": {
-    "HOME": "Home"
+    "TITLE": "Welcome to",
+    "SUBTITLE": "Helping companies"
   }
 }
